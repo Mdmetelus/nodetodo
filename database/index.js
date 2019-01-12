@@ -1,3 +1,10 @@
 const knex = require('knex')({
-    client:'pg'
+    client:'pg',
+    cinnection: {
+        host: 'localhost',
+        database: 'todo_db'
+    } 
+
 })
+
+module.exports = knex;
