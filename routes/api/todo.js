@@ -26,4 +26,17 @@ router.post('/', (req,res) => {
     // db.insert().then().catch()
 })
 
+router.put('/:id', (req, res) => {
+    console.log(req.params.id);
+    // res.send('hello')
+    db.insert(req.body).returning('*').into('todo').then((data) => {
+        res.send(data)});
+})
+
+router.update('/:id', (req, res) => {
+    
+    // db.
+
+});
+
 module.exports = router;
